@@ -1,68 +1,10 @@
-.switch-container {
-  width: 52px;
-  height: 32px;
-  background-color: #36343b;
-  border: 2px solid #79747e;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+/*Default Theme*/
+:root {
+  color-scheme: dark light;
 }
 
-.switch {
-  width: 16px;
-  height: 16px;
-  background-color: #938f99;
-  border-radius: 50%;
-  margin: 2px;
-  margin-left: 5px;
-  transition: transform 0.3s, outline 0.2s ease;
-}
-
-.switch-container.active .switch {
-  width: 24px;
-  height: 24px;
-  background-color: #d0bcff;
-}
-
-.switch-container.active .switch::before {
-  font-family: "Material Symbols Outlined";
-  content: "\e5ca";
-  color: #381e72;
-  justify-content: center;
-  display: flex;
-  transform: translateY(10%);
-}
-
-.switch:active {
-  width: 30px;
-  height: 30px;
-  margin-left: 1px;
-}
-
-.switch-container.active .switch:active::before {
-  transform: translateY(20%);
-}
-
-.switch:hover {
-  background-color: #cac4d0;
-  outline: #d0bcff1c 10px solid;
-}
-
-.switch:hover:active {
-  background-color: #cac4d0;
-  outline-width: 3px;
-}
-
-.switch-container.active .switch:active {
-  width: 28px;
-  height: 28px;
-  margin-left: 2px;
-}
-
-.switch-container.active {
-  background-color: #381e72;
-  border-color: #381e72; /* Cor de fundo quando habilitado */
+body {
+  background: var(--md-sys-color-background);
 }
 
 /*Label Buttons*/
@@ -73,8 +15,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 100px;
-  background: #d0bcff;
-  color: #381e72;
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
   border-style: none;
   cursor: pointer;
   margin-top: 10px;
@@ -95,8 +37,8 @@
   display: inline-flex;
   padding: 10px 24px;
   border-radius: 100px;
-  background: #d0bcff;
-  color: #381e72;
+  background: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
   border-style: none;
   cursor: pointer;
   margin-top: 10px;
@@ -118,4 +60,99 @@
   content: "\e145";
   margin-left: -7px;
   margin-right: 4px;
+}
+
+/*Sliders*/
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 6px;
+  bottom: 4px;
+  background-color: var(--md-sys-color-outline);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  top: 8px;
+}
+
+/*.slider:hover::before {
+  outline: 10px solid;
+}*/
+
+input:checked + .slider {
+  background-color: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--on-primary-color);
+}
+
+input:checked + .slider:before {
+  height: 24px;
+  width: 24px;
+  top: 4px;
+  left: -3px;
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: var(--md-sys-color-on-primary);
+  font-family: "Material Symbols Outlined";
+  content: "\e876";
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: var(--md-sys-color-on-primary-container);
+}
+
+/* Rounded sliders */
+.slider.round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+  width: 52px;
+  height: 32px;
+  border-radius: 100px;
+  border: 2px solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface);
+}
+
+.slider.round:before {
+  border-radius: 100%;
+}
+
+/*Theme Picker*/
+.theme-picker {
+  margin-top: 20px;
+}
+
+.theme-picker > fieldset {
+  border: 0;
+  font-family: "Open Sans";
 }

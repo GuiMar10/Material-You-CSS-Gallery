@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="themes.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
@@ -10,13 +11,37 @@
       href="https://fonts.googleapis.com/css?family=Roboto"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="switch-container">
-      <div class="switch" id="toggle-switch"></div>
-    </div>
+    <label id="movecardsswitch" class="switch">
+      <input type="checkbox" checked />
+      <span class="slider round"></span>
+    </label>
+    <br />
     <button class="labelbtn">Label</button> <br />
     <button class="iconlabelbtn">Label</button>
+    <form class="theme-picker" action="">
+      <fieldset>
+        <legend>Pick a theme</legend>
+        <label for="theme" hidden="true">Default</label>
+        <input type="radio" name="theme" id="default" checked />
+
+        <label for="theme" hidden="true">Strawberry</label>
+        <input type="radio" name="theme" id="strawberry" />
+
+        <label for="theme" hidden="true">Coffee</label>
+        <input type="radio" name="theme" id="coffee" />
+
+        <label for="theme" hidden="true">Green Tea</label>
+        <input type="radio" name="theme" id="green-tea" />
+
+        <label for="theme" hidden="true">Grapes</label>
+        <input type="radio" name="theme" id="grapes" />
+      </fieldset>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
   </body>
