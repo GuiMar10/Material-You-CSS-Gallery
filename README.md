@@ -5,7 +5,7 @@ Here is a quick documentation!
 ### Basic Switches
 ```
 <label class="basic-switch">
-      <input type="checkbox" checked />
+      <input type="checkbox"/>
       <span class="slider round"></span>
     </label>
 ```
@@ -20,7 +20,7 @@ Result:
 ### Iconed Switches (Enabled icon)
 ```
 <label class="icon-switch1">
-      <input type="checkbox" checked />
+      <input type="checkbox"/>
       <span class="slider round"></span>
     </label>
 ```
@@ -35,7 +35,7 @@ Result:
 ### Iconed Switches (Both icons)
 ```
 <label class="icon-switch2">
-      <input type="checkbox" checked />
+      <input type="checkbox"/>
       <span class="slider round"></span>
     </label>
 ```
