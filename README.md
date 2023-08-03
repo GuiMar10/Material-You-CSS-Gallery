@@ -2,6 +2,7 @@
 Here is a quick documentation!
 
 ## Switches
+### Basic Switches
 ```
 <label class="basic-switch">
       <input type="checkbox" checked />
