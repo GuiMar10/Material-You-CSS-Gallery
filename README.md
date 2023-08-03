@@ -1,4 +1,4 @@
-# Material-You-CSS-Gallery
+# Material You CSS Gallery
 Here is a quick documentation!
 
 ## Switches
